@@ -14,6 +14,8 @@
 #import "WHShopInfoController.h"
 #import "WHShopPOI_InfoModel.h"
 #import "WHShopHeaderView.h"
+#import "WHShopOrderCategoryModel.h"
+
 
 // 头部视图的最大和最小高度
 #define KShopHeaderViewMaxHeight   180
@@ -31,6 +33,9 @@
 @property (nonatomic, weak) UIScrollView *scrollView;
 /// 头部模型数据
 @property (nonatomic, strong) WHShopPOI_InfoModel *shopPOI_infoModel;
+
+/// 保存所有食物模型
+@property (nonatomic, strong) NSArray *categoryData;
 
 
 @end
@@ -288,6 +293,11 @@
     
     // 创建三个控制器
     WHShopOrderController *vc1 = [[WHShopOrderController alloc] init];
+    
+    // 给点菜控制器传数据
+    vc1.categoryData = _categoryData;
+    
+    
     WHShopCommentController *vc2 = [[WHShopCommentController alloc] init];
     WHShopInfoController *vc3 = [[WHShopInfoController alloc] init];
     NSArray *vcs = @[vc1, vc2, vc3];
@@ -380,7 +390,29 @@
     _shopPOI_infoModel = poi_infoModel;
     
     
+    
+    
+    
+    
+    
+    
+    NSArray *food_spu_tagsDictArray = jsonDict[@"data"][@"food_spu_tags"];
+    // 创建可变数组用来保存食物类型模型
+    NSMutableArray *categoryArrM = [NSMutableArray arrayWithCapacity:food_spu_tagsDictArray.count];
+    
+    for (NSDictionary *categoryDict in food_spu_tagsDictArray) {
+        WHShopOrderCategoryModel *categoryModel = [WHShopOrderCategoryModel shopOrderCategoryWithDict:categoryDict];
+        [categoryArrM addObject:categoryModel];
+    }
+    
+    _categoryData = categoryArrM.copy;
+    
+    
 }
+
+
+
+
 
 
 

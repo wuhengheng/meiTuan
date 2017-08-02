@@ -54,7 +54,6 @@
 		F6A584471F2F62240025D10E /* UILabel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584441F2F62240025D10E /* UILabel+Addition.m */; };
 		F6A584481F2F62240025D10E /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584461F2F62240025D10E /* UIColor+Addition.m */; };
 		F6A584511F2F64D90025D10E /* WHShopCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584501F2F64D90025D10E /* WHShopCommentController.m */; };
-		F6A584541F2F64FC0025D10E /* WHShopOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584531F2F64FC0025D10E /* WHShopOrderController.m */; };
 		F6A584571F2F650D0025D10E /* WHShopInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584561F2F650D0025D10E /* WHShopInfoController.m */; };
 		F6A584591F3082C10025D10E /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = F6A584581F3082C10025D10E /* food.json */; };
 		F6A5845F1F3086980025D10E /* WHShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5845C1F3086980025D10E /* WHShopController.m */; };
@@ -67,6 +66,9 @@
 		F6A5847E1F31E7020025D10E /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5847D1F31E7020025D10E /* UIView+Addition.m */; };
 		F6A584831F323DEC0025D10E /* WHShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584811F323DEC0025D10E /* WHShopDetailController.m */; };
 		F6A584861F323E4C0025D10E /* WHShopDetailAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584851F323E4C0025D10E /* WHShopDetailAnimator.m */; };
+		F6A5848C1F324CE90025D10E /* WHShopOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584891F324CE90025D10E /* WHShopOrderController.m */; };
+		F6A5848F1F324D1E0025D10E /* WHShopOrderCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5848E1F324D1E0025D10E /* WHShopOrderCategoryModel.m */; };
+		F6A584921F324D4A0025D10E /* WHShopOrderFoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584911F324D4A0025D10E /* WHShopOrderFoodModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,8 +174,6 @@
 		F6A584461F2F62240025D10E /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
 		F6A5844F1F2F64D90025D10E /* WHShopCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopCommentController.h; sourceTree = "<group>"; };
 		F6A584501F2F64D90025D10E /* WHShopCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopCommentController.m; sourceTree = "<group>"; };
-		F6A584521F2F64FC0025D10E /* WHShopOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderController.h; sourceTree = "<group>"; };
-		F6A584531F2F64FC0025D10E /* WHShopOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderController.m; sourceTree = "<group>"; };
 		F6A584551F2F650D0025D10E /* WHShopInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopInfoController.h; sourceTree = "<group>"; };
 		F6A584561F2F650D0025D10E /* WHShopInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopInfoController.m; sourceTree = "<group>"; };
 		F6A584581F3082C10025D10E /* food.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
@@ -197,6 +197,12 @@
 		F6A584811F323DEC0025D10E /* WHShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopDetailController.m; sourceTree = "<group>"; };
 		F6A584841F323E4C0025D10E /* WHShopDetailAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopDetailAnimator.h; sourceTree = "<group>"; };
 		F6A584851F323E4C0025D10E /* WHShopDetailAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopDetailAnimator.m; sourceTree = "<group>"; };
+		F6A584881F324CE90025D10E /* WHShopOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderController.h; sourceTree = "<group>"; };
+		F6A584891F324CE90025D10E /* WHShopOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderController.m; sourceTree = "<group>"; };
+		F6A5848D1F324D1E0025D10E /* WHShopOrderCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderCategoryModel.h; sourceTree = "<group>"; };
+		F6A5848E1F324D1E0025D10E /* WHShopOrderCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderCategoryModel.m; sourceTree = "<group>"; };
+		F6A584901F324D4A0025D10E /* WHShopOrderFoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderFoodModel.h; sourceTree = "<group>"; };
+		F6A584911F324D4A0025D10E /* WHShopOrderFoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderFoodModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,8 +460,9 @@
 		F6A5844B1F2F64400025D10E /* ShopOrder */ = {
 			isa = PBXGroup;
 			children = (
-				F6A584521F2F64FC0025D10E /* WHShopOrderController.h */,
-				F6A584531F2F64FC0025D10E /* WHShopOrderController.m */,
+				F6A584871F324CE90025D10E /* Controller */,
+				F6A5848A1F324CE90025D10E /* Model */,
+				F6A5848B1F324CE90025D10E /* View */,
 			);
 			path = ShopOrder;
 			sourceTree = "<group>";
@@ -525,6 +532,33 @@
 				F6A584851F323E4C0025D10E /* WHShopDetailAnimator.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		F6A584871F324CE90025D10E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6A584881F324CE90025D10E /* WHShopOrderController.h */,
+				F6A584891F324CE90025D10E /* WHShopOrderController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6A5848A1F324CE90025D10E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5848D1F324D1E0025D10E /* WHShopOrderCategoryModel.h */,
+				F6A5848E1F324D1E0025D10E /* WHShopOrderCategoryModel.m */,
+				F6A584901F324D4A0025D10E /* WHShopOrderFoodModel.h */,
+				F6A584911F324D4A0025D10E /* WHShopOrderFoodModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6A5848B1F324CE90025D10E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,7 +644,6 @@
 				F6A5839D1F2DFD630025D10E /* AFURLResponseSerialization.m in Sources */,
 				F6A583221F2DF5E10025D10E /* main.m in Sources */,
 				F6A583481F2DFD1F0025D10E /* WHFoodDetailController.m in Sources */,
-				F6A584541F2F64FC0025D10E /* WHShopOrderController.m in Sources */,
 				F6A584481F2F62240025D10E /* UIColor+Addition.m in Sources */,
 				F6A584861F323E4C0025D10E /* WHShopDetailAnimator.m in Sources */,
 				F6A583B41F2DFD630025D10E /* UIButton+WebCache.m in Sources */,
@@ -618,6 +651,7 @@
 				F6A583B61F2DFD630025D10E /* UIImage+MultiFormat.m in Sources */,
 				F6A583991F2DFD630025D10E /* AFHTTPSessionManager.m in Sources */,
 				F6A583BA1F2DFD630025D10E /* UIView+WebCache.m in Sources */,
+				F6A584921F324D4A0025D10E /* WHShopOrderFoodModel.m in Sources */,
 				F6A583AF1F2DFD630025D10E /* SDWebImageDecoder.m in Sources */,
 				F6A584651F3087080025D10E /* WHShopPOI_InfoModel.m in Sources */,
 				F6A583A81F2DFD630025D10E /* ViewController+MASAdditions.m in Sources */,
@@ -631,9 +665,11 @@
 				F6A5845F1F3086980025D10E /* WHShopController.m in Sources */,
 				F6A584571F2F650D0025D10E /* WHShopInfoController.m in Sources */,
 				F6A583AB1F2DFD630025D10E /* NSImage+WebCache.m in Sources */,
+				F6A5848F1F324D1E0025D10E /* WHShopOrderCategoryModel.m in Sources */,
 				F6A583B81F2DFD630025D10E /* UIImageView+HighlightedWebCache.m in Sources */,
 				F6A583C01F2E0DD40025D10E /* WHNavigationController.m in Sources */,
 				F6A583AA1F2DFD630025D10E /* NSData+ImageContentType.m in Sources */,
+				F6A5848C1F324CE90025D10E /* WHShopOrderController.m in Sources */,
 				F6A583A91F2DFD630025D10E /* MKAnnotationView+WebCache.m in Sources */,
 				F6A5847E1F31E7020025D10E /* UIView+Addition.m in Sources */,
 				F6A583A11F2DFD630025D10E /* MASConstraintMaker.m in Sources */,
