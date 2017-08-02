@@ -9,6 +9,8 @@
 #import "WHShopOrderController.h"
 #import "WHShopOrderCategoryModel.h"
 #import "WHShopOrderFoodModel.h"
+#import "WHShopOrderCategoryCell.h"
+
 @interface WHShopOrderController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, weak) UITableView *categoryTableView;
 
@@ -52,7 +54,15 @@ static NSString *foodCellID = @"foodCellID";
     categoryTableView.dataSource = self;
     
     // 注册cell
-    [categoryTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:categoryCellID];
+    [categoryTableView registerClass:[WHShopOrderCategoryCell class] forCellReuseIdentifier:categoryCellID];
+    
+    
+    // 设置行高
+    categoryTableView.rowHeight = 60;
+    
+    // 隐藏分割线
+    categoryTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     
 }
 #pragma mark - 食物表格处理
@@ -97,11 +107,10 @@ static NSString *foodCellID = @"foodCellID";
     
     // 返回类型表格cell
     if (tableView == _categoryTableView) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryCellID forIndexPath:indexPath];
+        WHShopOrderCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryCellID forIndexPath:indexPath];
         // 取出类别模型
-        WHShopOrderCategoryModel *categoryModel = _categoryData[indexPath.row];
-        cell.textLabel.text = categoryModel.name;
-        
+        // 给cell传模型
+        cell.categoryModel = _categoryData[indexPath.row];
         return cell;
         
     }

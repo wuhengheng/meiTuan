@@ -69,6 +69,7 @@
 		F6A5848C1F324CE90025D10E /* WHShopOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584891F324CE90025D10E /* WHShopOrderController.m */; };
 		F6A5848F1F324D1E0025D10E /* WHShopOrderCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5848E1F324D1E0025D10E /* WHShopOrderCategoryModel.m */; };
 		F6A584921F324D4A0025D10E /* WHShopOrderFoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584911F324D4A0025D10E /* WHShopOrderFoodModel.m */; };
+		F6A584951F3256F00025D10E /* WHShopOrderCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -203,6 +204,8 @@
 		F6A5848E1F324D1E0025D10E /* WHShopOrderCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderCategoryModel.m; sourceTree = "<group>"; };
 		F6A584901F324D4A0025D10E /* WHShopOrderFoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderFoodModel.h; sourceTree = "<group>"; };
 		F6A584911F324D4A0025D10E /* WHShopOrderFoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderFoodModel.m; sourceTree = "<group>"; };
+		F6A584931F3256F00025D10E /* WHShopOrderCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderCategoryCell.h; sourceTree = "<group>"; };
+		F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderCategoryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,6 +560,8 @@
 		F6A5848B1F324CE90025D10E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6A584931F3256F00025D10E /* WHShopOrderCategoryCell.h */,
+				F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -648,6 +653,7 @@
 				F6A584861F323E4C0025D10E /* WHShopDetailAnimator.m in Sources */,
 				F6A583B41F2DFD630025D10E /* UIButton+WebCache.m in Sources */,
 				F6A583AD1F2DFD630025D10E /* SDImageCacheConfig.m in Sources */,
+				F6A584951F3256F00025D10E /* WHShopOrderCategoryCell.m in Sources */,
 				F6A583B61F2DFD630025D10E /* UIImage+MultiFormat.m in Sources */,
 				F6A583991F2DFD630025D10E /* AFHTTPSessionManager.m in Sources */,
 				F6A583BA1F2DFD630025D10E /* UIView+WebCache.m in Sources */,
