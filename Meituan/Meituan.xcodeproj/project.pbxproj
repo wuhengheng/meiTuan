@@ -70,6 +70,7 @@
 		F6A5848F1F324D1E0025D10E /* WHShopOrderCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5848E1F324D1E0025D10E /* WHShopOrderCategoryModel.m */; };
 		F6A584921F324D4A0025D10E /* WHShopOrderFoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584911F324D4A0025D10E /* WHShopOrderFoodModel.m */; };
 		F6A584951F3256F00025D10E /* WHShopOrderCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */; };
+		F6A584981F325D880025D10E /* WHShopOrderFoodHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584971F325D880025D10E /* WHShopOrderFoodHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +207,8 @@
 		F6A584911F324D4A0025D10E /* WHShopOrderFoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderFoodModel.m; sourceTree = "<group>"; };
 		F6A584931F3256F00025D10E /* WHShopOrderCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderCategoryCell.h; sourceTree = "<group>"; };
 		F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderCategoryCell.m; sourceTree = "<group>"; };
+		F6A584961F325D880025D10E /* WHShopOrderFoodHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderFoodHeaderView.h; sourceTree = "<group>"; };
+		F6A584971F325D880025D10E /* WHShopOrderFoodHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderFoodHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,6 +565,8 @@
 			children = (
 				F6A584931F3256F00025D10E /* WHShopOrderCategoryCell.h */,
 				F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */,
+				F6A584961F325D880025D10E /* WHShopOrderFoodHeaderView.h */,
+				F6A584971F325D880025D10E /* WHShopOrderFoodHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -659,6 +664,7 @@
 				F6A583BA1F2DFD630025D10E /* UIView+WebCache.m in Sources */,
 				F6A584921F324D4A0025D10E /* WHShopOrderFoodModel.m in Sources */,
 				F6A583AF1F2DFD630025D10E /* SDWebImageDecoder.m in Sources */,
+				F6A584981F325D880025D10E /* WHShopOrderFoodHeaderView.m in Sources */,
 				F6A584651F3087080025D10E /* WHShopPOI_InfoModel.m in Sources */,
 				F6A583A81F2DFD630025D10E /* ViewController+MASAdditions.m in Sources */,
 				F6A583B91F2DFD630025D10E /* UIImageView+WebCache.m in Sources */,

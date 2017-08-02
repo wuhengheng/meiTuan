@@ -10,6 +10,8 @@
 #import "WHShopOrderCategoryModel.h"
 #import "WHShopOrderFoodModel.h"
 #import "WHShopOrderCategoryCell.h"
+#import "WHShopOrderFoodHeaderView.h"
+
 
 @interface WHShopOrderController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, weak) UITableView *categoryTableView;
@@ -17,6 +19,8 @@
 @end
 static NSString *categoryCellID = @"categoryCellID";
 static NSString *foodCellID = @"foodCellID";
+static NSString *foodHeaderViewID = @"foodHeaderViewID";
+
 @implementation WHShopOrderController
 
 - (void)viewDidLoad {
@@ -81,6 +85,13 @@ static NSString *foodCellID = @"foodCellID";
     
     // 注册cell
     [foodTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:foodCellID];
+
+
+    // 注册头部视图
+    [foodTableView registerClass:[WHShopOrderFoodHeaderView class] forHeaderFooterViewReuseIdentifier:foodHeaderViewID];
+    
+    // 设置每一组的组头统一高度
+    foodTableView.sectionHeaderHeight = 30;
 }
 
 #pragma mark - 返回有多少组
@@ -129,5 +140,13 @@ static NSString *foodCellID = @"foodCellID";
     return cell;
 }
 
-
+// 返回每一组的头部视图
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    WHShopOrderFoodHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:foodHeaderViewID];
+    
+    headerView.categoryModel = _categoryData[section];
+    
+    return headerView;
+}
 @end
