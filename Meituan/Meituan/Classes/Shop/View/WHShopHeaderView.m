@@ -194,9 +194,10 @@
     _shopPOI_infoModel = shopPOI_infoModel;
     
     
-    
     // 删除url后面多余的.webp后缀
     NSString *bgImageURLStr = [shopPOI_infoModel.poi_back_pic_url stringByDeletingPathExtension];
+    
+    
     // 设置背景图片
     [_backImageView sd_setImageWithURL:[NSURL URLWithString:bgImageURLStr]];
     
@@ -211,9 +212,12 @@
     
     // 商家公告
     _bulletinLabel.text = shopPOI_infoModel.bulletin;
+
     
     // 把所有的优惠 信息模型数组传给轮播视图
     _loopView.discounts = shopPOI_infoModel.discounts;
+
+    
 }
 @end
 

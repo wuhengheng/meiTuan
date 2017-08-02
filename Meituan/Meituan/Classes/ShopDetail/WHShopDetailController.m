@@ -10,6 +10,25 @@
 #import "WHShopPOI_InfoModel.h"
 #import "WHInfoModel.h"
 #import "WHInfoView.h"
+
+
+@interface WHScrollView : UIScrollView
+
+@end
+
+@implementation WHScrollView
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self.viewControler dismissViewControllerAnimated:YES completion:nil];
+}
+
+@end
+
+
+
+
+
 @interface WHShopDetailController ()
 
 @end
@@ -36,7 +55,6 @@
     }];
     
     
-    
     // TODO: 添加关闭按钮
     UIButton *closeBtn = [[UIButton alloc] init];
     [closeBtn setImage:[UIImage imageNamed:@"btn_close_normal"] forState:UIControlStateNormal];
@@ -51,9 +69,8 @@
     [closeBtn addTarget:self action:@selector(closeBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     
-    
     // TODO:添加滚动视图
-    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    WHScrollView *scrollView = [[WHScrollView alloc] init];
     //    scrollView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:scrollView];
     
@@ -161,7 +178,7 @@
     
     
     
-    // TODO: 折扣信息
+    // TODO: 公告信息
     UILabel *shopBulletinLabel = [UILabel makeLabelWithText:@"公告信息" andTextFont:16 andTextColor:[UIColor whiteColor]];
     [contentView addSubview:shopBulletinLabel];
     
@@ -225,6 +242,12 @@
 #pragma mark - 设置状态栏样式
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+// 当手从商家详情控制器view上抬起时调用
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
