@@ -11,6 +11,8 @@
 #import "WHShopOrderFoodModel.h"
 #import "WHShopOrderCategoryCell.h"
 #import "WHShopOrderFoodHeaderView.h"
+#import "WHShopOrderFoodCell.h"
+
 
 
 @interface WHShopOrderController ()<UITableViewDelegate, UITableViewDataSource>
@@ -83,8 +85,10 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     foodTableView.delegate = self;
     foodTableView.dataSource = self;
     
+    
+     UINib *nib = [UINib nibWithNibName:@"WHShopOrderFoodCell" bundle:nil];
     // 注册cell
-    [foodTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:foodCellID];
+    [foodTableView registerNib:nib forCellReuseIdentifier:foodCellID];
 
 
     // 注册头部视图
@@ -92,6 +96,9 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
     // 设置每一组的组头统一高度
     foodTableView.sectionHeaderHeight = 30;
+    
+    // 设置预估行高
+    foodTableView.estimatedRowHeight = 150;
 }
 
 #pragma mark - 返回有多少组
@@ -129,13 +136,13 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
     
     // 返回食物表格cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:foodCellID forIndexPath:indexPath];
+    WHShopOrderFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:foodCellID forIndexPath:indexPath];
     // 先取出表格一组食物的类型模型
-    WHShopOrderCategoryModel *categoryModel = _categoryData[indexPath.section];
+ //   WHShopOrderCategoryModel *categoryModel = _categoryData[indexPath.section];
     // 取出表格一个食物的模型
-    WHShopOrderFoodModel *foodModel = categoryModel.spus[indexPath.row];
+  //  WHShopOrderFoodModel *foodModel = categoryModel.spus[indexPath.row];
     
-    cell.textLabel.text = foodModel.name;
+  //  cell.textLabel.text = foodModel.name;
     
     return cell;
 }

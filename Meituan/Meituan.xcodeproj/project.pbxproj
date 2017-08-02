@@ -71,6 +71,8 @@
 		F6A584921F324D4A0025D10E /* WHShopOrderFoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584911F324D4A0025D10E /* WHShopOrderFoodModel.m */; };
 		F6A584951F3256F00025D10E /* WHShopOrderCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */; };
 		F6A584981F325D880025D10E /* WHShopOrderFoodHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584971F325D880025D10E /* WHShopOrderFoodHeaderView.m */; };
+		F6A5849C1F3260490025D10E /* WHShopOrderFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5849A1F3260490025D10E /* WHShopOrderFoodCell.m */; };
+		F6A5849D1F3260490025D10E /* WHShopOrderFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A5849B1F3260490025D10E /* WHShopOrderFoodCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -209,6 +211,9 @@
 		F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderCategoryCell.m; sourceTree = "<group>"; };
 		F6A584961F325D880025D10E /* WHShopOrderFoodHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderFoodHeaderView.h; sourceTree = "<group>"; };
 		F6A584971F325D880025D10E /* WHShopOrderFoodHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderFoodHeaderView.m; sourceTree = "<group>"; };
+		F6A584991F3260490025D10E /* WHShopOrderFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderFoodCell.h; sourceTree = "<group>"; };
+		F6A5849A1F3260490025D10E /* WHShopOrderFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderFoodCell.m; sourceTree = "<group>"; };
+		F6A5849B1F3260490025D10E /* WHShopOrderFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHShopOrderFoodCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -567,6 +572,9 @@
 				F6A584941F3256F00025D10E /* WHShopOrderCategoryCell.m */,
 				F6A584961F325D880025D10E /* WHShopOrderFoodHeaderView.h */,
 				F6A584971F325D880025D10E /* WHShopOrderFoodHeaderView.m */,
+				F6A584991F3260490025D10E /* WHShopOrderFoodCell.h */,
+				F6A5849A1F3260490025D10E /* WHShopOrderFoodCell.m */,
+				F6A5849B1F3260490025D10E /* WHShopOrderFoodCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -631,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6A584591F3082C10025D10E /* food.json in Resources */,
+				F6A5849D1F3260490025D10E /* WHShopOrderFoodCell.xib in Resources */,
 				F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */,
 				F6A5832D1F2DF5E10025D10E /* Assets.xcassets in Resources */,
 			);
@@ -702,6 +711,7 @@
 				F6A583B21F2DFD630025D10E /* SDWebImageManager.m in Sources */,
 				F6A5846B1F309EA30025D10E /* UIImage+DashLine.m in Sources */,
 				F6A583B71F2DFD630025D10E /* UIImage+WebP.m in Sources */,
+				F6A5849C1F3260490025D10E /* WHShopOrderFoodCell.m in Sources */,
 				F6A5839C1F2DFD630025D10E /* AFURLRequestSerialization.m in Sources */,
 				F6A583A41F2DFD630025D10E /* MASViewConstraint.m in Sources */,
 			);
