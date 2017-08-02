@@ -64,8 +64,9 @@
 		F6A5846F1F30D3D30025D10E /* WHInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5846E1F30D3D30025D10E /* WHInfoModel.m */; };
 		F6A584721F31563B0025D10E /* WHInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584711F31563B0025D10E /* WHInfoView.m */; };
 		F6A584751F3161B90025D10E /* WHInfoLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584741F3161B90025D10E /* WHInfoLoopView.m */; };
-		F6A5847B1F31E3650025D10E /* WHShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5847A1F31E3650025D10E /* WHShopDetailController.m */; };
 		F6A5847E1F31E7020025D10E /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5847D1F31E7020025D10E /* UIView+Addition.m */; };
+		F6A584831F323DEC0025D10E /* WHShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584811F323DEC0025D10E /* WHShopDetailController.m */; };
+		F6A584861F323E4C0025D10E /* WHShopDetailAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584851F323E4C0025D10E /* WHShopDetailAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,10 +191,12 @@
 		F6A584711F31563B0025D10E /* WHInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHInfoView.m; sourceTree = "<group>"; };
 		F6A584731F3161B90025D10E /* WHInfoLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHInfoLoopView.h; sourceTree = "<group>"; };
 		F6A584741F3161B90025D10E /* WHInfoLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHInfoLoopView.m; sourceTree = "<group>"; };
-		F6A584791F31E3650025D10E /* WHShopDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopDetailController.h; sourceTree = "<group>"; };
-		F6A5847A1F31E3650025D10E /* WHShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopDetailController.m; sourceTree = "<group>"; };
 		F6A5847C1F31E7020025D10E /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
 		F6A5847D1F31E7020025D10E /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		F6A584801F323DEC0025D10E /* WHShopDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopDetailController.h; sourceTree = "<group>"; };
+		F6A584811F323DEC0025D10E /* WHShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopDetailController.m; sourceTree = "<group>"; };
+		F6A584841F323E4C0025D10E /* WHShopDetailAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopDetailAnimator.h; sourceTree = "<group>"; };
+		F6A584851F323E4C0025D10E /* WHShopDetailAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopDetailAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,10 +503,28 @@
 		F6A584781F31E3330025D10E /* ShopDetail */ = {
 			isa = PBXGroup;
 			children = (
-				F6A584791F31E3650025D10E /* WHShopDetailController.h */,
-				F6A5847A1F31E3650025D10E /* WHShopDetailController.m */,
+				F6A5847F1F323DEC0025D10E /* Controller */,
+				F6A584821F323DEC0025D10E /* Other */,
 			);
 			path = ShopDetail;
+			sourceTree = "<group>";
+		};
+		F6A5847F1F323DEC0025D10E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6A584801F323DEC0025D10E /* WHShopDetailController.h */,
+				F6A584811F323DEC0025D10E /* WHShopDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6A584821F323DEC0025D10E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F6A584841F323E4C0025D10E /* WHShopDetailAnimator.h */,
+				F6A584851F323E4C0025D10E /* WHShopDetailAnimator.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -578,7 +599,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A5847B1F31E3650025D10E /* WHShopDetailController.m in Sources */,
 				F6A583B51F2DFD630025D10E /* UIImage+GIF.m in Sources */,
 				F6A583BB1F2DFD630025D10E /* UIView+WebCacheOperation.m in Sources */,
 				F6A583A71F2DFD630025D10E /* View+MASAdditions.m in Sources */,
@@ -592,6 +612,7 @@
 				F6A583481F2DFD1F0025D10E /* WHFoodDetailController.m in Sources */,
 				F6A584541F2F64FC0025D10E /* WHShopOrderController.m in Sources */,
 				F6A584481F2F62240025D10E /* UIColor+Addition.m in Sources */,
+				F6A584861F323E4C0025D10E /* WHShopDetailAnimator.m in Sources */,
 				F6A583B41F2DFD630025D10E /* UIButton+WebCache.m in Sources */,
 				F6A583AD1F2DFD630025D10E /* SDImageCacheConfig.m in Sources */,
 				F6A583B61F2DFD630025D10E /* UIImage+MultiFormat.m in Sources */,
@@ -625,6 +646,7 @@
 				F6A583A21F2DFD630025D10E /* MASLayoutConstraint.m in Sources */,
 				F6A583A51F2DFD630025D10E /* NSArray+MASAdditions.m in Sources */,
 				F6A584721F31563B0025D10E /* WHInfoView.m in Sources */,
+				F6A584831F323DEC0025D10E /* WHShopDetailController.m in Sources */,
 				F6A583B31F2DFD630025D10E /* SDWebImagePrefetcher.m in Sources */,
 				F6A5839A1F2DFD630025D10E /* AFNetworkReachabilityManager.m in Sources */,
 				F6A583B11F2DFD630025D10E /* SDWebImageDownloaderOperation.m in Sources */,

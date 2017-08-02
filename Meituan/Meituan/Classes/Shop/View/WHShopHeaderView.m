@@ -10,6 +10,7 @@
 #import "WHShopPOI_InfoModel.h"
 #import "WHInfoLoopView.h"
 #import "WHShopDetailController.h"
+#import "WHShopDetailAnimator.h"
 
 
 @interface WHShopHeaderView ()
@@ -26,6 +27,9 @@
 
 /// 优惠信息轮播视图
 @property (nonatomic, weak) WHInfoLoopView *loopView;
+
+/// 此属性是为了强引用住转场动画代码对象
+@property (nonatomic, strong) WHShopDetailAnimator *animator;
 @end
 @implementation WHShopHeaderView
 
@@ -155,11 +159,11 @@
     
     
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 一启就让它模态出商家详情控制器
-        [self loopViewClick];
-        
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 一启就让它模态出商家详情控制器
+//        [self loopViewClick];
+//        
+//    });
 }
 
 
@@ -171,6 +175,17 @@
     
     // 给商家详情控制器传数据
     detailVC.shopPOIInfoModel = _shopPOI_infoModel;
+    
+    
+    // 设置展示后后面控制器view的显示方式 展示样式为自定义
+    detailVC.modalPresentationStyle = UIModalPresentationCustom;
+    
+    // 创建转场代理对象
+    _animator = [[WHShopDetailAnimator alloc] init];
+    
+    // 给要显示'modal'出来的控制器设置转场代理
+    detailVC.transitioningDelegate = _animator;
+
     
     // 2.模态商家详情控制器
     [self.viewControler presentViewController:detailVC animated:YES completion:nil];
