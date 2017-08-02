@@ -64,6 +64,8 @@
 		F6A5846F1F30D3D30025D10E /* WHInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5846E1F30D3D30025D10E /* WHInfoModel.m */; };
 		F6A584721F31563B0025D10E /* WHInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584711F31563B0025D10E /* WHInfoView.m */; };
 		F6A584751F3161B90025D10E /* WHInfoLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A584741F3161B90025D10E /* WHInfoLoopView.m */; };
+		F6A5847B1F31E3650025D10E /* WHShopDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5847A1F31E3650025D10E /* WHShopDetailController.m */; };
+		F6A5847E1F31E7020025D10E /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5847D1F31E7020025D10E /* UIView+Addition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +190,10 @@
 		F6A584711F31563B0025D10E /* WHInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHInfoView.m; sourceTree = "<group>"; };
 		F6A584731F3161B90025D10E /* WHInfoLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHInfoLoopView.h; sourceTree = "<group>"; };
 		F6A584741F3161B90025D10E /* WHInfoLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHInfoLoopView.m; sourceTree = "<group>"; };
+		F6A584791F31E3650025D10E /* WHShopDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopDetailController.h; sourceTree = "<group>"; };
+		F6A5847A1F31E3650025D10E /* WHShopDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopDetailController.m; sourceTree = "<group>"; };
+		F6A5847C1F31E7020025D10E /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		F6A5847D1F31E7020025D10E /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +251,7 @@
 		F6A583371F2DF95D0025D10E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6A584781F31E3330025D10E /* ShopDetail */,
 				F6A583BD1F2E0CCC0025D10E /* Main */,
 				F6A583391F2DF95D0025D10E /* Shop */,
 				F6A583381F2DF95D0025D10E /* FoodDetail */,
@@ -286,6 +293,8 @@
 				F6A583C71F2E59CA0025D10E /* NSObject+LinearFormula.h */,
 				F6A583C81F2E59CA0025D10E /* NSObject+LinearFormula.m */,
 				F6A583CA1F2E5A5B0025D10E /* Additions.h */,
+				F6A5847C1F31E7020025D10E /* UIView+Addition.h */,
+				F6A5847D1F31E7020025D10E /* UIView+Addition.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -488,6 +497,15 @@
 			path = LoopView;
 			sourceTree = "<group>";
 		};
+		F6A584781F31E3330025D10E /* ShopDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F6A584791F31E3650025D10E /* WHShopDetailController.h */,
+				F6A5847A1F31E3650025D10E /* WHShopDetailController.m */,
+			);
+			path = ShopDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -560,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A5847B1F31E3650025D10E /* WHShopDetailController.m in Sources */,
 				F6A583B51F2DFD630025D10E /* UIImage+GIF.m in Sources */,
 				F6A583BB1F2DFD630025D10E /* UIView+WebCacheOperation.m in Sources */,
 				F6A583A71F2DFD630025D10E /* View+MASAdditions.m in Sources */,
@@ -595,6 +614,7 @@
 				F6A583C01F2E0DD40025D10E /* WHNavigationController.m in Sources */,
 				F6A583AA1F2DFD630025D10E /* NSData+ImageContentType.m in Sources */,
 				F6A583A91F2DFD630025D10E /* MKAnnotationView+WebCache.m in Sources */,
+				F6A5847E1F31E7020025D10E /* UIView+Addition.m in Sources */,
 				F6A583A11F2DFD630025D10E /* MASConstraintMaker.m in Sources */,
 				F6A583AE1F2DFD630025D10E /* SDWebImageCompat.m in Sources */,
 				F6A5846F1F30D3D30025D10E /* WHInfoModel.m in Sources */,
