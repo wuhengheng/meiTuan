@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		F692541D1F32F99100E94EB4 /* WHShopOrderCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F692541C1F32F99100E94EB4 /* WHShopOrderCountView.xib */; };
 		F69254201F32F9CE00E94EB4 /* WHShopOrderCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = F692541F1F32F9CE00E94EB4 /* WHShopOrderCountView.m */; };
+		F69254271F334C8F00E94EB4 /* WHFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69254231F334C8F00E94EB4 /* WHFoodDetailController.m */; };
 		F6A583221F2DF5E10025D10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A583211F2DF5E10025D10E /* main.m */; };
 		F6A5832D1F2DF5E10025D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832C1F2DF5E10025D10E /* Assets.xcassets */; };
 		F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832E1F2DF5E10025D10E /* LaunchScreen.storyboard */; };
 		F6A5833F1F2DF95D0025D10E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5833E1F2DF95D0025D10E /* AppDelegate.m */; };
-		F6A583481F2DFD1F0025D10E /* WHFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A583471F2DFD1F0025D10E /* WHFoodDetailController.m */; };
 		F6A583991F2DFD630025D10E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5834B1F2DFD630025D10E /* AFHTTPSessionManager.m */; };
 		F6A5839A1F2DFD630025D10E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5834E1F2DFD630025D10E /* AFNetworkReachabilityManager.m */; };
 		F6A5839B1F2DFD630025D10E /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A583501F2DFD630025D10E /* AFSecurityPolicy.m */; };
@@ -81,6 +81,8 @@
 		F692541C1F32F99100E94EB4 /* WHShopOrderCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHShopOrderCountView.xib; sourceTree = "<group>"; };
 		F692541E1F32F9CE00E94EB4 /* WHShopOrderCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderCountView.h; sourceTree = "<group>"; };
 		F692541F1F32F9CE00E94EB4 /* WHShopOrderCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderCountView.m; sourceTree = "<group>"; };
+		F69254221F334C8F00E94EB4 /* WHFoodDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoodDetailController.h; sourceTree = "<group>"; };
+		F69254231F334C8F00E94EB4 /* WHFoodDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHFoodDetailController.m; sourceTree = "<group>"; };
 		F6A5831D1F2DF5E10025D10E /* Meituan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meituan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A583211F2DF5E10025D10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6A5832C1F2DF5E10025D10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,8 +90,6 @@
 		F6A583311F2DF5E10025D10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6A5833D1F2DF95D0025D10E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F6A5833E1F2DF95D0025D10E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F6A583461F2DFD1F0025D10E /* WHFoodDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoodDetailController.h; sourceTree = "<group>"; };
-		F6A583471F2DFD1F0025D10E /* WHFoodDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHFoodDetailController.m; sourceTree = "<group>"; };
 		F6A5834A1F2DFD630025D10E /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		F6A5834B1F2DFD630025D10E /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		F6A5834C1F2DFD630025D10E /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -232,6 +232,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F69254211F334C8F00E94EB4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F69254221F334C8F00E94EB4 /* WHFoodDetailController.h */,
+				F69254231F334C8F00E94EB4 /* WHFoodDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F69254241F334C8F00E94EB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F69254251F334C8F00E94EB4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F69254261F334C8F00E94EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F6A583141F2DF5E10025D10E = {
 			isa = PBXGroup;
 			children = (
@@ -290,8 +320,10 @@
 		F6A583381F2DF95D0025D10E /* FoodDetail */ = {
 			isa = PBXGroup;
 			children = (
-				F6A583461F2DFD1F0025D10E /* WHFoodDetailController.h */,
-				F6A583471F2DFD1F0025D10E /* WHFoodDetailController.m */,
+				F69254211F334C8F00E94EB4 /* Controller */,
+				F69254241F334C8F00E94EB4 /* Model */,
+				F69254251F334C8F00E94EB4 /* Other */,
+				F69254261F334C8F00E94EB4 /* View */,
 			);
 			path = FoodDetail;
 			sourceTree = "<group>";
@@ -671,13 +703,13 @@
 				F6A584751F3161B90025D10E /* WHInfoLoopView.m in Sources */,
 				F6A5839D1F2DFD630025D10E /* AFURLResponseSerialization.m in Sources */,
 				F6A583221F2DF5E10025D10E /* main.m in Sources */,
-				F6A583481F2DFD1F0025D10E /* WHFoodDetailController.m in Sources */,
 				F6A584481F2F62240025D10E /* UIColor+Addition.m in Sources */,
 				F6A584861F323E4C0025D10E /* WHShopDetailAnimator.m in Sources */,
 				F6A583B41F2DFD630025D10E /* UIButton+WebCache.m in Sources */,
 				F6A583AD1F2DFD630025D10E /* SDImageCacheConfig.m in Sources */,
 				F6A584951F3256F00025D10E /* WHShopOrderCategoryCell.m in Sources */,
 				F6A583B61F2DFD630025D10E /* UIImage+MultiFormat.m in Sources */,
+				F69254271F334C8F00E94EB4 /* WHFoodDetailController.m in Sources */,
 				F6A583991F2DFD630025D10E /* AFHTTPSessionManager.m in Sources */,
 				F6A583BA1F2DFD630025D10E /* UIView+WebCache.m in Sources */,
 				F6A584921F324D4A0025D10E /* WHShopOrderFoodModel.m in Sources */,
