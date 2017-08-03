@@ -21,7 +21,7 @@
 @implementation WHShopOrderCountView
 
 + (instancetype)shopOrderCountView {
-    return [[[UINib nibWithNibName:@"HMShopOrderCountView" bundle:nil] instantiateWithOwner:nil options:nil] firstObject];
+    return [[[UINib nibWithNibName:@"WHShopOrderCountView" bundle:nil] instantiateWithOwner:nil options:nil] firstObject];
 }
 
 -(void)awakeFromNib {
