@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WHShopOrderFoodModel;
 @interface WHShopOrderFoodCell : UITableViewCell
+/// 食物模型
+@property (nonatomic, strong) WHShopOrderFoodModel *foodModel;
 
 @end

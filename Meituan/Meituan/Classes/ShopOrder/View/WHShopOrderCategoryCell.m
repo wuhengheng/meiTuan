@@ -29,15 +29,14 @@
 
 - (void)setupUI {
     
-    // 设置背景颜色
-    self.backgroundColor = [UIColor colorWithHex:0xefefef];
     
     // 设置最多两行
     self.textLabel.numberOfLines = 2;
     // 设置字体
     self.textLabel.font = [UIFont systemFontOfSize:12];
     
-    
+    // 设置背景颜色
+    self.backgroundColor = [UIColor colorWithHex:0xefefef];
     
     // 给cell设置一个背景视图
     UIView *bgLineView = [[UIView alloc] init];
@@ -47,7 +46,7 @@
     [bgLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.offset(0);
         make.height.offset(1);
-        make.bottom.offset(1);
+        make.bottom.offset(0);
     }];
     
     

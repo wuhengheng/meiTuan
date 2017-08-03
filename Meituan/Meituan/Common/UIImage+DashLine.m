@@ -21,7 +21,7 @@
     
     // 3.画线
     CGContextMoveToPoint(ctx, 0, 1);
-    CGContextAddLineToPoint(ctx, 4, 1);
+    CGContextAddLineToPoint(ctx, 4, 0);
     
     // 4.设置为虚线样式
     CGFloat lengths[] = {2, 2};

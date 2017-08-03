@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="KGk-i7-Jjw" customClass="WHShopOrderFoodCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_food_loading" translatesAutoresizingMaskIntoConstraints="NO" id="hKR-ZG-5fG">
+                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="ScV-Y4-7PB"/>
+                            <constraint firstAttribute="width" constant="64" id="aMt-HQ-V11"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="妈妈的土豆丝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTm-Mf-cAt">
+                        <rect key="frame" x="80" y="8" width="92" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精品家常菜十大家常菜之一" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO3-oX-sTo">
+                        <rect key="frame" x="80" y="32" width="160" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月售998" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eH8-Hb-WeD">
+                        <rect key="frame" x="80" y="56" width="52" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赞998" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FO0-JC-fNt">
+                        <rect key="frame" x="140" y="56" width="38" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥998" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-yl-aoG">
+                        <rect key="frame" x="80" y="92" width="46" height="13"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lO3-oX-sTo" firstAttribute="leading" secondItem="gTm-Mf-cAt" secondAttribute="leading" id="0dZ-DR-RRM"/>
+                    <constraint firstAttribute="bottom" secondItem="uNS-yl-aoG" secondAttribute="bottom" constant="8" id="9VS-Yg-8V5"/>
+                    <constraint firstItem="lO3-oX-sTo" firstAttribute="centerY" secondItem="hKR-ZG-5fG" secondAttribute="centerY" id="CTM-8e-FI6"/>
+                    <constraint firstItem="eH8-Hb-WeD" firstAttribute="leading" secondItem="lO3-oX-sTo" secondAttribute="leading" id="QMm-FT-RND"/>
+                    <constraint firstItem="FO0-JC-fNt" firstAttribute="leading" secondItem="eH8-Hb-WeD" secondAttribute="trailing" constant="8" id="dpo-bs-0Ju"/>
+                    <constraint firstItem="gTm-Mf-cAt" firstAttribute="leading" secondItem="hKR-ZG-5fG" secondAttribute="trailing" constant="8" id="ia8-Xt-eZX"/>
+                    <constraint firstItem="gTm-Mf-cAt" firstAttribute="top" secondItem="hKR-ZG-5fG" secondAttribute="top" id="jMm-c4-Nfq"/>
+                    <constraint firstItem="uNS-yl-aoG" firstAttribute="top" secondItem="eH8-Hb-WeD" secondAttribute="bottom" constant="20" id="jt1-h4-bDU"/>
+                    <constraint firstItem="hKR-ZG-5fG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="nEN-SG-POh"/>
+                    <constraint firstItem="hKR-ZG-5fG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="o9f-kd-LQU"/>
+                    <constraint firstItem="uNS-yl-aoG" firstAttribute="leading" secondItem="eH8-Hb-WeD" secondAttribute="leading" id="pRk-DN-EdH"/>
+                    <constraint firstItem="FO0-JC-fNt" firstAttribute="centerY" secondItem="eH8-Hb-WeD" secondAttribute="centerY" id="ryi-2O-HYa"/>
+                    <constraint firstItem="eH8-Hb-WeD" firstAttribute="bottom" secondItem="hKR-ZG-5fG" secondAttribute="bottom" id="tdG-0d-9eD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="_descriptionLabel" destination="lO3-oX-sTo" id="8T1-eA-Tmy"/>
+                <outlet property="min_priceLabel" destination="uNS-yl-aoG" id="TEd-94-XL7"/>
+                <outlet property="month_saled_contentLabel" destination="eH8-Hb-WeD" id="mjP-KZ-qo2"/>
+                <outlet property="nameLabel" destination="gTm-Mf-cAt" id="v9V-oi-elP"/>
+                <outlet property="pictureView" destination="hKR-ZG-5fG" id="f4Y-a8-dxj"/>
+                <outlet property="praise_contentLabel" destination="FO0-JC-fNt" id="eAy-qV-Dfe"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="88.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_food_loading" width="60" height="60"/>
+    </resources>
+</document>

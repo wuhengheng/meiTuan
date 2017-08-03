@@ -236,6 +236,8 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+    
+    
 }
 
 
@@ -243,6 +245,12 @@
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
+
+    
+    
+    
+    
+
 
 // 当手从商家详情控制器view上抬起时调用
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -20,8 +20,7 @@
 
     // 把导航控制器自带的导航条隐藏掉
     self.navigationBar.hidden = YES;
-
-
+    
 }
 
 

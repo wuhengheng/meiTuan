@@ -138,9 +138,11 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     // 返回食物表格cell
     WHShopOrderFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:foodCellID forIndexPath:indexPath];
     // 先取出表格一组食物的类型模型
- //   WHShopOrderCategoryModel *categoryModel = _categoryData[indexPath.section];
+    WHShopOrderCategoryModel *categoryModel = _categoryData[indexPath.section];
     // 取出表格一个食物的模型
-  //  WHShopOrderFoodModel *foodModel = categoryModel.spus[indexPath.row];
+    WHShopOrderFoodModel *foodModel = categoryModel.spus[indexPath.row];
+    
+    cell.foodModel = foodModel;
     
   //  cell.textLabel.text = foodModel.name;
     
