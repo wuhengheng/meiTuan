@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="121.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_food_loading" translatesAutoresizingMaskIntoConstraints="NO" id="g5e-5F-z6m">
@@ -48,8 +48,8 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥ 9998" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ow5-nO-nYg">
-                        <rect key="frame" x="80" y="94" width="57.5" height="19.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="¥ 9998" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ow5-nO-nYg">
+                        <rect key="frame" x="80" y="94" width="58" height="20"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -74,6 +74,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="_descriptionLabel" destination="yYo-C4-ynu" id="cpN-Yh-gcG"/>
+                <outlet property="descTopConstraint" destination="6kI-M4-Wvn" id="EJR-Sz-DUG"/>
                 <outlet property="min_priceLabel" destination="Ow5-nO-nYg" id="LsF-at-iMZ"/>
                 <outlet property="month_saled_contentLabel" destination="Gji-y2-gmI" id="Roc-Qq-BJS"/>
                 <outlet property="nameLabel" destination="fy2-Zr-oL9" id="3np-aT-vkD"/>

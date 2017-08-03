@@ -14,13 +14,16 @@
 ///配图
 @property (nonatomic, copy) NSString *picture;
 ///食物描述
-@property (nonatomic, copy) NSString *_description;
+@property (nonatomic, copy) NSString *desc;
 ///月售
 @property (nonatomic, copy) NSString *month_saled_content;
 ///点赞
 @property (nonatomic, copy) NSString *praise_content;
 ///价格
-@property (nonatomic, copy) NSString *min_price;
+@property (nonatomic, assign) float min_price;
+
+/// 记录当前食物的选购数量
+@property (nonatomic, assign) NSInteger count;
 
 
 + (instancetype)shopOrderFoodWithDict:(NSDictionary *)dict;

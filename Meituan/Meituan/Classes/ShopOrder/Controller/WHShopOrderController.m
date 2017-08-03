@@ -16,7 +16,12 @@
 
 
 @interface WHShopOrderController ()<UITableViewDelegate, UITableViewDataSource>
+
+///分类tableView
 @property (nonatomic, weak) UITableView *categoryTableView;
+
+///食物tableView
+@property (nonatomic, weak) UITableView *foodTableView;
 
 @end
 static NSString *categoryCellID = @"categoryCellID";
@@ -26,11 +31,19 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
 @implementation WHShopOrderController
 
 - (void)viewDidLoad {
+    
+    
     [super viewDidLoad];
     
+    
     self.view.backgroundColor = [UIColor blueColor];
+
     
     [self setupUI];
+    
+   
+
+    
 }
 
 #pragma mark - 界面搭建
@@ -54,6 +67,7 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
         make.width.offset(100);
     }];
     
+    
     _categoryTableView = categoryTableView;
     
     categoryTableView.delegate = self;
@@ -69,6 +83,7 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     // 隐藏分割线
     categoryTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
+    
     
 }
 #pragma mark - 食物表格处理
@@ -99,6 +114,9 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
     // 设置预估行高
     foodTableView.estimatedRowHeight = 150;
+    
+    
+    _foodTableView = foodTableView;
 }
 
 #pragma mark - 返回有多少组
@@ -158,4 +176,17 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
     return headerView;
 }
+
+
+//取消选中
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (_foodTableView == tableView) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+    
+    
+}
+
+
 @end
