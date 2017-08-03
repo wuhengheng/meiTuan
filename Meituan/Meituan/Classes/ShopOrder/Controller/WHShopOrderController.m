@@ -17,11 +17,17 @@
 
 @interface WHShopOrderController ()<UITableViewDelegate, UITableViewDataSource>
 
+
 ///分类tableView
 @property (nonatomic, weak) UITableView *categoryTableView;
 
 ///食物tableView
 @property (nonatomic, weak) UITableView *foodTableView;
+
+
+/// 记录类别表格是不是手动选中
+@property (nonatomic, assign) BOOL categoryTableViewClick;
+
 
 @end
 static NSString *categoryCellID = @"categoryCellID";
@@ -82,6 +88,12 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
     // 隐藏分割线
     categoryTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    // 默认类别表格选中第0行
+    [categoryTableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
 
     
     
@@ -186,6 +198,35 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     }
     
     
+    if (_categoryTableView == tableView) {
+        
+        _categoryTableViewClick = YES;// 当前正在手动选中
+        // 用类别表格个的索引来当 食物表格组的索引
+        NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.row];
+        // 让食物表格滚动
+        [_foodTableView scrollToRowAtIndexPath:scrollIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    }
+    
+    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    // 如果当前是食物表格在滚动
+    if (_foodTableView == scrollView && _categoryTableViewClick == NO) {
+        
+        NSIndexPath *indexPath = [[_foodTableView indexPathsForVisibleRows] firstObject];
+        
+        NSIndexPath *selectIndexPath = [NSIndexPath indexPathForRow:indexPath.section inSection:0];
+        [_categoryTableView selectRowAtIndexPath:selectIndexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+        
+    }
+    
+}
+
+// 当食物表格动画方法滚动停下来后,此时类别表格的选中再设置为NO
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    _categoryTableViewClick = NO;
 }
 
 

@@ -39,6 +39,7 @@
     return self;
 }
 
+
 - (void)setupUI {
     // 更新初始状态
     [self updateState];
