@@ -26,6 +26,15 @@
 @property (nonatomic, assign) NSInteger count;
 
 
+/// 差评
+@property (nonatomic, assign) CGFloat tread_num;
+
+/// 好评
+@property (nonatomic, assign) CGFloat praise_num;
+
+
+
+
 + (instancetype)shopOrderFoodWithDict:(NSDictionary *)dict;
 
 @end
