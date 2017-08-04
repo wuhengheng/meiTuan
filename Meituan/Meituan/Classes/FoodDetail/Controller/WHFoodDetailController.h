@@ -12,4 +12,7 @@
 @interface WHFoodDetailController : WHBaseController
 /// 接收所有食物数据
 @property (nonatomic, strong) NSArray<WHShopOrderCategoryModel *> *categoryData;
+
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
 @end

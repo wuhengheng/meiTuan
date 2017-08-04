@@ -12,7 +12,7 @@
 		F69254271F334C8F00E94EB4 /* WHFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69254231F334C8F00E94EB4 /* WHFoodDetailController.m */; };
 		F692542A1F34573500E94EB4 /* WHFoodDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F69254291F34573500E94EB4 /* WHFoodDetailFlowLayout.m */; };
 		F692542E1F34583400E94EB4 /* WHFoodDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F692542C1F34583400E94EB4 /* WHFoodDetailCell.m */; };
-		F69254351F345C7E00E94EB4 /* WHFoodDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69254341F345C7E00E94EB4 /* WHFoodDetailCell.xib */; };
+		F69254371F347ABC00E94EB4 /* WHFoodDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69254361F347ABC00E94EB4 /* WHFoodDetailCell.xib */; };
 		F6A583221F2DF5E10025D10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A583211F2DF5E10025D10E /* main.m */; };
 		F6A5832D1F2DF5E10025D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832C1F2DF5E10025D10E /* Assets.xcassets */; };
 		F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832E1F2DF5E10025D10E /* LaunchScreen.storyboard */; };
@@ -90,7 +90,7 @@
 		F69254291F34573500E94EB4 /* WHFoodDetailFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHFoodDetailFlowLayout.m; sourceTree = "<group>"; };
 		F692542B1F34583400E94EB4 /* WHFoodDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoodDetailCell.h; sourceTree = "<group>"; };
 		F692542C1F34583400E94EB4 /* WHFoodDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHFoodDetailCell.m; sourceTree = "<group>"; };
-		F69254341F345C7E00E94EB4 /* WHFoodDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHFoodDetailCell.xib; sourceTree = "<group>"; };
+		F69254361F347ABC00E94EB4 /* WHFoodDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHFoodDetailCell.xib; sourceTree = "<group>"; };
 		F6A5831D1F2DF5E10025D10E /* Meituan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meituan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A583211F2DF5E10025D10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6A5832C1F2DF5E10025D10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 			children = (
 				F692542B1F34583400E94EB4 /* WHFoodDetailCell.h */,
 				F692542C1F34583400E94EB4 /* WHFoodDetailCell.m */,
-				F69254341F345C7E00E94EB4 /* WHFoodDetailCell.xib */,
+				F69254361F347ABC00E94EB4 /* WHFoodDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -692,7 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6A584591F3082C10025D10E /* food.json in Resources */,
-				F69254351F345C7E00E94EB4 /* WHFoodDetailCell.xib in Resources */,
+				F69254371F347ABC00E94EB4 /* WHFoodDetailCell.xib in Resources */,
 				F692541D1F32F99100E94EB4 /* WHShopOrderCountView.xib in Resources */,
 				F6A5849F1F32EEB10025D10E /* WHShopOrderFoodCell.xib in Resources */,
 				F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */,

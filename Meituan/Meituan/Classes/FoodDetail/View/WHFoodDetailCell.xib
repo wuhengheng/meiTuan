@@ -24,12 +24,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pf-5D-Uku">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="489"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3o-82-u38">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="240" id="Bvf-6D-DGN"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南瓜粥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vht-dc-xI3">
                                         <rect key="frame" x="8" y="248" width="52" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -108,8 +102,13 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </progressView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3o-82-u38">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="Bvf-6D-DGN"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="pVt-s5-cJO" firstAttribute="leading" secondItem="agM-Zo-WXY" secondAttribute="leading" id="48X-9Q-jXp"/>
                                     <constraint firstAttribute="trailing" secondItem="agM-Zo-WXY" secondAttribute="trailing" constant="8" id="5UY-wP-rPv"/>
@@ -161,6 +160,9 @@
                 <outlet property="percentageLabel" destination="ye9-pI-lfP" id="zrG-6Q-SH6"/>
                 <outlet property="pictureView" destination="y3o-82-u38" id="rOu-2F-6Jo"/>
                 <outlet property="progressView" destination="Ubv-qe-0et" id="lWq-40-er2"/>
+                <outlet property="scrollView" destination="rIj-rK-jNR" id="J4C-0k-jXz"/>
+                <outlet property="shopCommentTopConstraint" destination="qn7-pN-Ya5" id="blH-HA-TG8"/>
+                <outlet property="shopInfoLabel" destination="e4X-wd-6aj" id="RQB-JT-s8m"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </collectionViewCell>

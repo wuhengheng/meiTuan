@@ -198,7 +198,7 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
 }
 
 
-//取消选中
+#pragma mark - 选中cell调用
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (_foodTableView == tableView) {
@@ -211,13 +211,10 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
         // 给食物详情控制器传所有食物模型
         foodDetailVC.categoryData = _categoryData;
         
+         foodDetailVC.indexPath = indexPath;
+        
         [self.navigationController pushViewController:foodDetailVC animated:YES];
-        
-        
-        
-        
-        
-        
+   
         
     }
     
