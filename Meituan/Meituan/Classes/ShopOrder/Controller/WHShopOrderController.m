@@ -12,6 +12,8 @@
 #import "WHShopOrderCategoryCell.h"
 #import "WHShopOrderFoodHeaderView.h"
 #import "WHShopOrderFoodCell.h"
+#import "WHFoodDetailController.h"
+
 
 
 
@@ -94,7 +96,7 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     // 默认类别表格选中第0行
     [categoryTableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
-
+    
     
     
 }
@@ -129,6 +131,8 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
     
     _foodTableView = foodTableView;
+    
+    
 }
 
 #pragma mark - 返回有多少组
@@ -140,6 +144,8 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
     return _categoryData.count; // 类别模型的个数就表示食物表格的组数
 }
+
+
 
 #pragma mark - 返回每一组有多少行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -162,6 +168,8 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
         return cell;
         
     }
+    
+    
     
     
     
@@ -195,6 +203,22 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
     if (_foodTableView == tableView) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        
+        
+        
+        // 创建食物详情控制器
+        WHFoodDetailController *foodDetailVC = [[WHFoodDetailController alloc] init];
+        // 给食物详情控制器传所有食物模型
+        foodDetailVC.categoryData = _categoryData;
+        
+        [self.navigationController pushViewController:foodDetailVC animated:YES];
+        
+        
+        
+        
+        
+        
+        
     }
     
     

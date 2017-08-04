@@ -10,6 +10,9 @@
 		F692541D1F32F99100E94EB4 /* WHShopOrderCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F692541C1F32F99100E94EB4 /* WHShopOrderCountView.xib */; };
 		F69254201F32F9CE00E94EB4 /* WHShopOrderCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = F692541F1F32F9CE00E94EB4 /* WHShopOrderCountView.m */; };
 		F69254271F334C8F00E94EB4 /* WHFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69254231F334C8F00E94EB4 /* WHFoodDetailController.m */; };
+		F692542A1F34573500E94EB4 /* WHFoodDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F69254291F34573500E94EB4 /* WHFoodDetailFlowLayout.m */; };
+		F692542E1F34583400E94EB4 /* WHFoodDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F692542C1F34583400E94EB4 /* WHFoodDetailCell.m */; };
+		F69254311F34584E00E94EB4 /* WHFoodDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69254301F34584E00E94EB4 /* WHFoodDetailCell.xib */; };
 		F6A583221F2DF5E10025D10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A583211F2DF5E10025D10E /* main.m */; };
 		F6A5832D1F2DF5E10025D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832C1F2DF5E10025D10E /* Assets.xcassets */; };
 		F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832E1F2DF5E10025D10E /* LaunchScreen.storyboard */; };
@@ -83,6 +86,11 @@
 		F692541F1F32F9CE00E94EB4 /* WHShopOrderCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderCountView.m; sourceTree = "<group>"; };
 		F69254221F334C8F00E94EB4 /* WHFoodDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoodDetailController.h; sourceTree = "<group>"; };
 		F69254231F334C8F00E94EB4 /* WHFoodDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHFoodDetailController.m; sourceTree = "<group>"; };
+		F69254281F34573500E94EB4 /* WHFoodDetailFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoodDetailFlowLayout.h; sourceTree = "<group>"; };
+		F69254291F34573500E94EB4 /* WHFoodDetailFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHFoodDetailFlowLayout.m; sourceTree = "<group>"; };
+		F692542B1F34583400E94EB4 /* WHFoodDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoodDetailCell.h; sourceTree = "<group>"; };
+		F692542C1F34583400E94EB4 /* WHFoodDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHFoodDetailCell.m; sourceTree = "<group>"; };
+		F69254301F34584E00E94EB4 /* WHFoodDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHFoodDetailCell.xib; sourceTree = "<group>"; };
 		F6A5831D1F2DF5E10025D10E /* Meituan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meituan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A583211F2DF5E10025D10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6A5832C1F2DF5E10025D10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -251,6 +259,8 @@
 		F69254251F334C8F00E94EB4 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F69254281F34573500E94EB4 /* WHFoodDetailFlowLayout.h */,
+				F69254291F34573500E94EB4 /* WHFoodDetailFlowLayout.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -258,6 +268,9 @@
 		F69254261F334C8F00E94EB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F692542B1F34583400E94EB4 /* WHFoodDetailCell.h */,
+				F692542C1F34583400E94EB4 /* WHFoodDetailCell.m */,
+				F69254301F34584E00E94EB4 /* WHFoodDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -679,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6A584591F3082C10025D10E /* food.json in Resources */,
+				F69254311F34584E00E94EB4 /* WHFoodDetailCell.xib in Resources */,
 				F692541D1F32F99100E94EB4 /* WHShopOrderCountView.xib in Resources */,
 				F6A5849F1F32EEB10025D10E /* WHShopOrderFoodCell.xib in Resources */,
 				F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */,
@@ -696,6 +710,7 @@
 				F6A583B51F2DFD630025D10E /* UIImage+GIF.m in Sources */,
 				F6A583BB1F2DFD630025D10E /* UIView+WebCacheOperation.m in Sources */,
 				F6A583A71F2DFD630025D10E /* View+MASAdditions.m in Sources */,
+				F692542A1F34573500E94EB4 /* WHFoodDetailFlowLayout.m in Sources */,
 				F6A583C31F2E0E750025D10E /* WHBaseController.m in Sources */,
 				F6A583C61F2E53060025D10E /* WHNavigationBar.m in Sources */,
 				F6A5839B1F2DFD630025D10E /* AFSecurityPolicy.m in Sources */,
@@ -711,6 +726,7 @@
 				F6A583B61F2DFD630025D10E /* UIImage+MultiFormat.m in Sources */,
 				F69254271F334C8F00E94EB4 /* WHFoodDetailController.m in Sources */,
 				F6A583991F2DFD630025D10E /* AFHTTPSessionManager.m in Sources */,
+				F692542E1F34583400E94EB4 /* WHFoodDetailCell.m in Sources */,
 				F6A583BA1F2DFD630025D10E /* UIView+WebCache.m in Sources */,
 				F6A584921F324D4A0025D10E /* WHShopOrderFoodModel.m in Sources */,
 				F6A583AF1F2DFD630025D10E /* SDWebImageDecoder.m in Sources */,
