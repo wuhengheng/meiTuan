@@ -52,6 +52,14 @@
     _foodModel.count--;
     
     [self updateState];
+
+    _type = WHShopOrderCountViewBtnTypeMinus;
+    
+    if ([self.delegate respondsToSelector:@selector(shopOrderCountViewValueChange:)]) {
+        [self.delegate shopOrderCountViewValueChange:self];
+    }
+
+
 }
 
 #pragma mark - 加号
@@ -59,6 +67,12 @@
     _foodModel.count++;
     
     [self updateState];
+    
+    _type = WHShopOrderCountViewBtnTypeAdd;
+    
+    if ([self.delegate respondsToSelector:@selector(shopOrderCountViewValueChange:)]) {
+        [self.delegate shopOrderCountViewValueChange:self];
+    }
 }
 
 #pragma mark - 更新状态

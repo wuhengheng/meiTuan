@@ -15,6 +15,7 @@
 		F69254371F347ABC00E94EB4 /* WHFoodDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69254361F347ABC00E94EB4 /* WHFoodDetailCell.xib */; };
 		F6A017C61F37F0C900F7576F /* WHShopCarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A017C31F37F0C900F7576F /* WHShopCarView.xib */; };
 		F6A017C71F37F0C900F7576F /* WHShopCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A017C51F37F0C900F7576F /* WHShopCarView.m */; };
+		F6A017CD1F38310300F7576F /* WHShopCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A017CC1F38310300F7576F /* WHShopCarModel.m */; };
 		F6A583221F2DF5E10025D10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A583211F2DF5E10025D10E /* main.m */; };
 		F6A5832D1F2DF5E10025D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832C1F2DF5E10025D10E /* Assets.xcassets */; };
 		F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832E1F2DF5E10025D10E /* LaunchScreen.storyboard */; };
@@ -96,6 +97,8 @@
 		F6A017C31F37F0C900F7576F /* WHShopCarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHShopCarView.xib; sourceTree = "<group>"; };
 		F6A017C41F37F0C900F7576F /* WHShopCarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopCarView.h; sourceTree = "<group>"; };
 		F6A017C51F37F0C900F7576F /* WHShopCarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopCarView.m; sourceTree = "<group>"; };
+		F6A017CB1F38310300F7576F /* WHShopCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopCarModel.h; sourceTree = "<group>"; };
+		F6A017CC1F38310300F7576F /* WHShopCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopCarModel.m; sourceTree = "<group>"; };
 		F6A5831D1F2DF5E10025D10E /* Meituan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meituan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A583211F2DF5E10025D10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6A5832C1F2DF5E10025D10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				F6A017C31F37F0C900F7576F /* WHShopCarView.xib */,
 				F6A017C41F37F0C900F7576F /* WHShopCarView.h */,
 				F6A017C51F37F0C900F7576F /* WHShopCarView.m */,
+				F6A017CB1F38310300F7576F /* WHShopCarModel.h */,
+				F6A017CC1F38310300F7576F /* WHShopCarModel.m */,
 			);
 			path = ShopCar;
 			sourceTree = "<group>";
@@ -776,6 +781,7 @@
 				F6A583C91F2E59CA0025D10E /* NSObject+LinearFormula.m in Sources */,
 				F6A583A01F2DFD630025D10E /* MASConstraint.m in Sources */,
 				F6A583A61F2DFD630025D10E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				F6A017CD1F38310300F7576F /* WHShopCarModel.m in Sources */,
 				F6A583A21F2DFD630025D10E /* MASLayoutConstraint.m in Sources */,
 				F6A583A51F2DFD630025D10E /* NSArray+MASAdditions.m in Sources */,
 				F6A584721F31563B0025D10E /* WHInfoView.m in Sources */,

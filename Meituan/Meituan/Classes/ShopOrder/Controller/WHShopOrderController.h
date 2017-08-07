@@ -12,4 +12,7 @@
 @interface WHShopOrderController : UIViewController
 /// 接收全部食物模型数据
 @property (nonatomic, strong) NSArray<WHShopOrderCategoryModel *> *categoryData;
+
+// 装两个食物表格
+@property (nonatomic, strong) NSArray *tableViews;
 @end

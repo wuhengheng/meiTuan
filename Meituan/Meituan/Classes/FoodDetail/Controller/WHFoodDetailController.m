@@ -12,6 +12,9 @@
 #import "WHShopOrderFoodModel.h"
 #import "WHShopOrderCategoryModel.h"
 #import "WHFoodDetailCell.h"
+#import "WHShopCarView.h"
+
+
 @interface WHFoodDetailController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
@@ -32,6 +35,16 @@ static NSString *foodDetailCellID = @"foodDetailCellID";
     // 不让系统再帮忙自动内缩
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    WHShopCarView *shopCarView = [WHShopCarView shopCarView];
+    [self.view addSubview:shopCarView];
+    
+    [shopCarView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.offset(0);
+        make.height.offset(shopCarView.bounds.size.height);
+    }];
+    
+    // 给购物车传模型
+    shopCarView.shopCarModel = _shopCarModel;
     
 }
 

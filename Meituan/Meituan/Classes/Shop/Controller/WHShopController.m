@@ -20,7 +20,7 @@
 // 头部视图的最大和最小高度
 #define KShopHeaderViewMaxHeight   180
 #define KShopHeaderViewMinHeight   64
-@interface WHShopController ()<UIScrollViewDelegate>
+@interface WHShopController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 //头部视图
 @property (nonatomic, weak) WHShopHeaderView *shopHeaderView;
@@ -36,6 +36,9 @@
 
 /// 保存所有食物模型
 @property (nonatomic, strong) NSArray *categoryData;
+
+@property (nonatomic, weak) WHShopOrderController *orderVC;
+
 
 
 @end
@@ -93,7 +96,8 @@
     [self.view addGestureRecognizer:pan];
 
     
-    
+    pan.delegate = self;
+
 }
 
 - (void)setupUI {
@@ -139,31 +143,87 @@
 #pragma - mark 平移手势
 - (void)panGesture:(UIPanGestureRecognizer *)pan {
     
+    if (_scrollView.isDragging == YES) { // 如果当前scrollView正在拖拽就不让shopHeaderView变化
+        return;
+    }
+    
+    
+    // 判断两个食物表格当前的offset.y是否小于0 如果小于什么都不做
+    for (UITableView *tableView in _orderVC.tableViews) {
+        if (tableView.contentOffset.y < 0) {
+            return;
+        }
+    }
+    
+
+    
     // 获取平移的距离
     CGPoint p = [pan translationInView:pan.view];
     // 头部视图的高度
     CGFloat shopHeaderViewUpdateHeight = _shopHeaderView.bounds.size.height;
     
-    [_shopHeaderView mas_updateConstraints:^(MASConstraintMaker *make) {
-        
-        //如果它当前的高度加上平移的值 <= 64 直接就让它变到64
-        if (p.y + shopHeaderViewUpdateHeight < KShopHeaderViewMinHeight) {
+    switch (pan.state) {
+        case UIGestureRecognizerStateBegan:
+        case UIGestureRecognizerStateChanged:
             
-            make.height.offset(KShopHeaderViewMinHeight);
             
-            //如果它当前的高度加上平移的值 >= 180 直接就让它变到180
-        } else if (p.y + shopHeaderViewUpdateHeight >= KShopHeaderViewMaxHeight) {
+            [_shopHeaderView mas_updateConstraints:^(MASConstraintMaker *make) {
+                
+                //如果它当前的高度加上平移的值 <= 64 直接就让它变到64
+                if (p.y + shopHeaderViewUpdateHeight < KShopHeaderViewMinHeight) {
+                    
+                    make.height.offset(KShopHeaderViewMinHeight);
+                    
+                    //如果它当前的高度加上平移的值 >= 180 直接就让它变到180
+                } else if (p.y + shopHeaderViewUpdateHeight >= KShopHeaderViewMaxHeight) {
+                    
+                    make.height.offset(KShopHeaderViewMaxHeight);
+                    
+                } else { // 在大于 64 及小于180之间让它慢慢变化
+                    
+                    make.height.offset(p.y + shopHeaderViewUpdateHeight);
+                }
+                
+                
+                
+            }];
             
-            make.height.offset(KShopHeaderViewMaxHeight);
             
-        } else { // 在大于 64 及小于180之间让它慢慢变化
+            break;
+        case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateFailed:
+        case UIGestureRecognizerStateCancelled: {
             
-            make.height.offset(p.y + shopHeaderViewUpdateHeight);
+            // 判断是否过一半,如果过一半就让它为180如果不过一半就回到64
+            CGFloat shopHeaderMiddleHeight = (KShopHeaderViewMaxHeight - KShopHeaderViewMinHeight) * 0.5 + KShopHeaderViewMinHeight;
+            
+            // 更新高度约束
+            [_shopHeaderView mas_updateConstraints:^(MASConstraintMaker *make) {
+                
+                // 如果高度大于显示区域的一半就让它到180反之到64
+                if (self.shopHeaderView.bounds.size.height > shopHeaderMiddleHeight) {
+                    
+                    make.height.offset(KShopHeaderViewMaxHeight);
+                } else {
+                    make.height.offset(KShopHeaderViewMinHeight);
+                    
+                }
+            }];
+            
+            [UIView animateWithDuration:0.25 animations:^{
+                [self.view layoutIfNeeded];
+            }];
+            
         }
-        
-        
-        
-    }];
+            break;
+            
+            
+        default:
+            break;
+    }
+    
+    // 获取 最新高度
+    shopHeaderViewUpdateHeight = _shopHeaderView.bounds.size.height;
     
     
     // 计算导航条背景图片的透明度
@@ -297,6 +357,9 @@
     // 给点菜控制器传数据
     vc1.categoryData = _categoryData;
     
+    _orderVC = vc1;
+
+    
     
     WHShopCommentController *vc2 = [[WHShopCommentController alloc] init];
     WHShopInfoController *vc3 = [[WHShopInfoController alloc] init];
@@ -412,7 +475,10 @@
 
 
 
-
+// 让表格滚动和pan手势一起执行
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
 
 
 

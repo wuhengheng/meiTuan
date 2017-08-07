@@ -22,7 +22,6 @@
 ///描述顶部约束
 @property(weak,nonatomic) IBOutlet NSLayoutConstraint *descTopConstraint;
 
-@property (nonatomic, weak) WHShopOrderCountView *countView;
 
 
 @end

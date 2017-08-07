@@ -14,11 +14,15 @@
 #import "WHShopOrderFoodCell.h"
 #import "WHFoodDetailController.h"
 #import "WHShopCarView.h"
+#import "WHShopOrderCountView.h"
+#import "WHShopCarModel.h"
 
 
 
 
-@interface WHShopOrderController ()<UITableViewDelegate, UITableViewDataSource>
+
+
+@interface WHShopOrderController ()<UITableViewDelegate, UITableViewDataSource,WHShopOrderCountViewDelegate>
 
 
 ///分类tableView
@@ -34,6 +38,12 @@
 
 @property (nonatomic, weak) WHShopCarView *shopCarView;
 
+
+/// 保存所有选购的食物模型
+@property (nonatomic, strong) NSMutableArray<WHShopOrderFoodModel *> *foodModelArray;
+
+// 购物车模型
+@property (nonatomic, strong) WHShopCarModel *shopCarModel;
 
 
 @end
@@ -73,6 +83,9 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     [self settingFoodTableView];
     
     [self.view bringSubviewToFront:_shopCarView];
+    
+    // 给表格装到数组中,传递出去
+    _tableViews = @[_categoryTableView, _foodTableView];
     
 }
 
@@ -213,6 +226,11 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     
   //  cell.textLabel.text = foodModel.name;
     
+    //给countView设置代理
+    cell.countView.delegate = self;
+    
+    
+    
     return cell;
 }
 
@@ -241,6 +259,9 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
         foodDetailVC.categoryData = _categoryData;
         
          foodDetailVC.indexPath = indexPath;
+        
+        // 给食物详情控制器传购物车模型
+        foodDetailVC.shopCarModel = self.shopCarModel;
         
         [self.navigationController pushViewController:foodDetailVC animated:YES];
    
@@ -279,5 +300,52 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     _categoryTableViewClick = NO;
 }
 
+- (void)shopOrderCountViewValueChange:(WHShopOrderCountView *)countView {
+    
+    switch (countView.type) {
+        case WHShopOrderCountViewBtnTypeAdd:
+            
+            NSLog(@"多选了一个食物");
+            // 选购一个食物就把这个食物添加到数组
+            [self.foodModelArray addObject:countView.foodModel];
+            NSLog(@"%@", _foodModelArray);
+            
+            
+            //            NSLog(@"%@", NSStringFromCGPoint(countView.addBtn.center));
+            // 转换控件坐标系时,以它的直接父控件调用此方法 第一个参数传入要转换的控件位置 第二个参数传数要以那个控件的左上角为原点
+            CGPoint startPoint = [countView convertPoint:countView.addBtn.center toView:_shopCarView];
+            
+            
+            // 传入一个起点执行动画
+            [self.shopCarView animWithStartPoint:startPoint];
+            break;
+            
+        case WHShopOrderCountViewBtnTypeMinus:
+            
+            // 如果直接用removeObject:方法会把数组中同一个地址的对象全部删除,
+            //            [self.foodModelArray removeObject:countView.foodModel];
+            // 删除数组中指定索引的对象,一次只会删除一个
+            [self.foodModelArray removeObjectAtIndex:[self.foodModelArray indexOfObject:countView.foodModel]];
+            
+            
+            NSLog(@"%@", _foodModelArray);
+            
+            
+            
+            break;
+            
+        default:
+            break;
+    }
 
+    
+}
+
+
+- (NSMutableArray<WHShopOrderFoodModel *> *)foodModelArray {
+    if (_foodModelArray == nil) {
+        _foodModelArray = [NSMutableArray array];
+    }
+    return _foodModelArray;
+}
 @end

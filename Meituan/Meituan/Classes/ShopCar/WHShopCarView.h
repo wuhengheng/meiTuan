@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WHShopCarModel;
 
 @interface WHShopCarView : UIView
 
+/// 购物车模型
+@property (nonatomic, strong) WHShopCarModel *shopCarModel;
+
 + (instancetype)shopCarView;
+
+- (void)animWithStartPoint:(CGPoint)startPoint;
+
 @end

@@ -7,12 +7,15 @@
 //
 
 #import "WHBaseController.h"
-@class WHShopOrderCategoryModel;
+@class WHShopOrderCategoryModel,WHShopCarModel;
 
 @interface WHFoodDetailController : WHBaseController
 /// 接收所有食物数据
 @property (nonatomic, strong) NSArray<WHShopOrderCategoryModel *> *categoryData;
 
 @property (nonatomic, strong) NSIndexPath *indexPath;
+
+/// 车模型
+@property (nonatomic, strong) WHShopCarModel *shopCarModel;
 
 @end
