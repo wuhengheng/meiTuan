@@ -13,6 +13,7 @@
 #import "WHShopOrderFoodHeaderView.h"
 #import "WHShopOrderFoodCell.h"
 #import "WHFoodDetailController.h"
+#import "WHShopCarView.h"
 
 
 
@@ -29,6 +30,10 @@
 
 /// 记录类别表格是不是手动选中
 @property (nonatomic, assign) BOOL categoryTableViewClick;
+
+
+@property (nonatomic, weak) WHShopCarView *shopCarView;
+
 
 
 @end
@@ -57,13 +62,35 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
 #pragma mark - 界面搭建
 - (void)setupUI {
     
+    //添加购物车
+    [self settingShopCarView];
+    
+    
     // 类型表格
     [self settingCategoryTableView];
     
     // 食物表格
     [self settingFoodTableView];
     
+    [self.view bringSubviewToFront:_shopCarView];
+    
 }
+
+#pragma mark - 添加购物车
+- (void)settingShopCarView {
+    
+    WHShopCarView *shopCarView = [WHShopCarView shopCarView];
+    [self.view addSubview:shopCarView];
+    
+    [shopCarView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.offset(0);
+        make.height.offset(shopCarView.bounds.size.height);
+    }];
+    
+    _shopCarView = shopCarView;
+}
+
+
 #pragma mark - 类型表格处理
 - (void)settingCategoryTableView {
     
@@ -71,8 +98,9 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     [self.view addSubview:categoryTableView];
     
     [categoryTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.bottom.offset(0);
+        make.left.top.offset(0);
         make.width.offset(100);
+        make.bottom.equalTo(_shopCarView.mas_top).offset(0);
     }];
     
     
@@ -107,8 +135,9 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     [self.view addSubview:foodTableView];
     
     [foodTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.right.bottom.offset(0);
+        make.top.right.offset(0);
         make.left.equalTo(_categoryTableView.mas_right).offset(0);
+        make.bottom.equalTo(_shopCarView.mas_top).offset(0);
     }];
     
     foodTableView.delegate = self;
