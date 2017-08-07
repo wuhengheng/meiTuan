@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F692541D1F32F99100E94EB4 /* WHShopOrderCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F692541C1F32F99100E94EB4 /* WHShopOrderCountView.xib */; };
 		F69254201F32F9CE00E94EB4 /* WHShopOrderCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = F692541F1F32F9CE00E94EB4 /* WHShopOrderCountView.m */; };
 		F69254271F334C8F00E94EB4 /* WHFoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69254231F334C8F00E94EB4 /* WHFoodDetailController.m */; };
 		F692542A1F34573500E94EB4 /* WHFoodDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F69254291F34573500E94EB4 /* WHFoodDetailFlowLayout.m */; };
 		F692542E1F34583400E94EB4 /* WHFoodDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F692542C1F34583400E94EB4 /* WHFoodDetailCell.m */; };
 		F69254371F347ABC00E94EB4 /* WHFoodDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69254361F347ABC00E94EB4 /* WHFoodDetailCell.xib */; };
-		F6A017C61F37F0C900F7576F /* WHShopCarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A017C31F37F0C900F7576F /* WHShopCarView.xib */; };
 		F6A017C71F37F0C900F7576F /* WHShopCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A017C51F37F0C900F7576F /* WHShopCarView.m */; };
 		F6A017CD1F38310300F7576F /* WHShopCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A017CC1F38310300F7576F /* WHShopCarModel.m */; };
+		F6A017CF1F383AE200F7576F /* WHShopOrderCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A017CE1F383AE200F7576F /* WHShopOrderCountView.xib */; };
+		F6A017D11F383CC000F7576F /* WHShopCarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A017D01F383CC000F7576F /* WHShopCarView.xib */; };
 		F6A583221F2DF5E10025D10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A583211F2DF5E10025D10E /* main.m */; };
 		F6A5832D1F2DF5E10025D10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832C1F2DF5E10025D10E /* Assets.xcassets */; };
 		F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A5832E1F2DF5E10025D10E /* LaunchScreen.storyboard */; };
@@ -84,7 +84,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F692541C1F32F99100E94EB4 /* WHShopOrderCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHShopOrderCountView.xib; sourceTree = "<group>"; };
 		F692541E1F32F9CE00E94EB4 /* WHShopOrderCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopOrderCountView.h; sourceTree = "<group>"; };
 		F692541F1F32F9CE00E94EB4 /* WHShopOrderCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopOrderCountView.m; sourceTree = "<group>"; };
 		F69254221F334C8F00E94EB4 /* WHFoodDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoodDetailController.h; sourceTree = "<group>"; };
@@ -94,11 +93,12 @@
 		F692542B1F34583400E94EB4 /* WHFoodDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHFoodDetailCell.h; sourceTree = "<group>"; };
 		F692542C1F34583400E94EB4 /* WHFoodDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHFoodDetailCell.m; sourceTree = "<group>"; };
 		F69254361F347ABC00E94EB4 /* WHFoodDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHFoodDetailCell.xib; sourceTree = "<group>"; };
-		F6A017C31F37F0C900F7576F /* WHShopCarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHShopCarView.xib; sourceTree = "<group>"; };
 		F6A017C41F37F0C900F7576F /* WHShopCarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopCarView.h; sourceTree = "<group>"; };
 		F6A017C51F37F0C900F7576F /* WHShopCarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopCarView.m; sourceTree = "<group>"; };
 		F6A017CB1F38310300F7576F /* WHShopCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHShopCarModel.h; sourceTree = "<group>"; };
 		F6A017CC1F38310300F7576F /* WHShopCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShopCarModel.m; sourceTree = "<group>"; };
+		F6A017CE1F383AE200F7576F /* WHShopOrderCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHShopOrderCountView.xib; sourceTree = "<group>"; };
+		F6A017D01F383CC000F7576F /* WHShopCarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHShopCarView.xib; sourceTree = "<group>"; };
 		F6A5831D1F2DF5E10025D10E /* Meituan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meituan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A583211F2DF5E10025D10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6A5832C1F2DF5E10025D10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 		F6A017C21F37EE4800F7576F /* ShopCar */ = {
 			isa = PBXGroup;
 			children = (
-				F6A017C31F37F0C900F7576F /* WHShopCarView.xib */,
+				F6A017D01F383CC000F7576F /* WHShopCarView.xib */,
 				F6A017C41F37F0C900F7576F /* WHShopCarView.h */,
 				F6A017C51F37F0C900F7576F /* WHShopCarView.m */,
 				F6A017CB1F38310300F7576F /* WHShopCarModel.h */,
@@ -646,7 +646,7 @@
 				F6A584991F3260490025D10E /* WHShopOrderFoodCell.h */,
 				F6A5849A1F3260490025D10E /* WHShopOrderFoodCell.m */,
 				F6A5849E1F32EEB10025D10E /* WHShopOrderFoodCell.xib */,
-				F692541C1F32F99100E94EB4 /* WHShopOrderCountView.xib */,
+				F6A017CE1F383AE200F7576F /* WHShopOrderCountView.xib */,
 				F692541E1F32F9CE00E94EB4 /* WHShopOrderCountView.h */,
 				F692541F1F32F9CE00E94EB4 /* WHShopOrderCountView.m */,
 			);
@@ -712,12 +712,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A017CF1F383AE200F7576F /* WHShopOrderCountView.xib in Resources */,
 				F6A584591F3082C10025D10E /* food.json in Resources */,
 				F69254371F347ABC00E94EB4 /* WHFoodDetailCell.xib in Resources */,
-				F692541D1F32F99100E94EB4 /* WHShopOrderCountView.xib in Resources */,
 				F6A5849F1F32EEB10025D10E /* WHShopOrderFoodCell.xib in Resources */,
 				F6A583301F2DF5E10025D10E /* LaunchScreen.storyboard in Resources */,
-				F6A017C61F37F0C900F7576F /* WHShopCarView.xib in Resources */,
+				F6A017D11F383CC000F7576F /* WHShopCarView.xib in Resources */,
 				F6A5832D1F2DF5E10025D10E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

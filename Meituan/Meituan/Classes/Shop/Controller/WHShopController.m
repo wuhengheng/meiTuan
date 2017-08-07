@@ -52,11 +52,11 @@
     
     
     // 加载数据
-    [self loadFoodData];
+    //    [self loadFoodData];
+    [self loadNetworkFoodData];
     
     
-    
-    [self setupUI];
+  //  [self setupUI];
     
     
     [super viewDidLoad];
@@ -112,6 +112,9 @@
     
     //  添加滚动视图
     [self settingShopScrollView];
+    
+    // 把导航条前置最顶层
+    [self.view bringSubviewToFront:self.navBar];
    
 }
 
@@ -480,6 +483,55 @@
     return YES;
 }
 
+#pragma mark - 加载网络数据
+- (void)loadNetworkFoodData {
+    
+    [[AFHTTPSessionManager manager] GET:@"https://raw.githubusercontent.com/heima26/FriendDemo/master/food.json" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *jsonDict) {
+        
+        // 3.获取自己想要的头部视图的数据
+        NSDictionary *poi_dict = jsonDict[@"data"][@"poi_info"];
+        
+        // 4.字典转模型
+        WHShopPOI_InfoModel *poi_infoModel = [WHShopPOI_InfoModel shopPOI_infoWithDict:poi_dict];
+        
+        _shopPOI_infoModel = poi_infoModel;
+        
+        
+        
+        /********* 以上处理的是 商家头部模型数据 *********/
+        
+        
+        
+        
+        
+        
+        
+        /********* 以下处理 食物模型 *************/
+        NSArray *food_spu_tagsDictArray = jsonDict[@"data"][@"food_spu_tags"];
+        // 创建可变数组用来保存食物类型模型
+        NSMutableArray *categoryArrM = [NSMutableArray arrayWithCapacity:food_spu_tagsDictArray.count];
+        
+        for (NSDictionary *categoryDict in food_spu_tagsDictArray) {
+            WHShopOrderCategoryModel *categoryModel = [WHShopOrderCategoryModel shopOrderCategoryWithDict:categoryDict];
+            [categoryArrM addObject:categoryModel];
+            
+        }
+        
+        _categoryData = categoryArrM.copy;
+        
+        
+        // 有数据之后再去创建控件
+        [self setupUI];
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error) {
+            NSLog(@"%@", error);
+        }
+    }];
+    
+    
+}
 
 
 

@@ -305,10 +305,10 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
     switch (countView.type) {
         case WHShopOrderCountViewBtnTypeAdd:
             
-            NSLog(@"多选了一个食物");
+          //  NSLog(@"多选了一个食物");
             // 选购一个食物就把这个食物添加到数组
             [self.foodModelArray addObject:countView.foodModel];
-            NSLog(@"%@", _foodModelArray);
+         //   NSLog(@"%@", _foodModelArray);
             
             
             //            NSLog(@"%@", NSStringFromCGPoint(countView.addBtn.center));
@@ -328,7 +328,7 @@ static NSString *foodHeaderViewID = @"foodHeaderViewID";
             [self.foodModelArray removeObjectAtIndex:[self.foodModelArray indexOfObject:countView.foodModel]];
             
             
-            NSLog(@"%@", _foodModelArray);
+        //    NSLog(@"%@", _foodModelArray);
             
             
             
